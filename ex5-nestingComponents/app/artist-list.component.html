@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor= "#artist of artists" (click)="select(artist)">
+    {{artist.name}}
+  </li>
+</ul>
+
+<my-artist *ngIf="selectedArtist" [artist] = "selectedArtist"></my-artist>
