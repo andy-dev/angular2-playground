@@ -1,0 +1,10 @@
+<ul>
+  <li *ngFor="#artist of artists">
+    {{artist.name}}
+  </li>
+
+    <div *ngIf="artists.length">
+      <h3>Your artist list has {{artists.length}} artists</h3>
+    </div>
+
+</ul>
