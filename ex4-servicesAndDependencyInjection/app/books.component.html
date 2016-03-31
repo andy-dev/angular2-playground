@@ -1,0 +1,9 @@
+<ul>
+  <li *ngFor= "#book of books">
+    {{book.name}}
+  </li>
+</ul>
+
+<div *ngIf = "books.length">
+  <h3>You have {{books.length}} books</h3>
+</div>
