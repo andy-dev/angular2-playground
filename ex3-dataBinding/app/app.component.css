@@ -1,0 +1,9 @@
+ul.messages > li {list-style: none;}
+
+ul {
+  height: 200px;
+  border: blue 1px dotted;
+  width: 300px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
