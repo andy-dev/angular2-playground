@@ -27,7 +27,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 ], ArtistComponent.prototype, "artist", void 0);
                 ArtistComponent = __decorate([
                     core_1.Component({
-                        selector: 'concert-artists',
+                        selector: 'concert-artist',
                         template: '<h3 *ngIf="artist">You selected {{artist.name}}</h3>',
                     }), 
                     __metadata('design:paramtypes', [])

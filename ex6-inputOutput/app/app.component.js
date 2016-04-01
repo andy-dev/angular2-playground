@@ -35,7 +35,7 @@ System.register(['angular2/core', 'angular2/http', './artists.component'], funct
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'concert-app',
-                        template: "\n  <div>\n    <h1>Concert Tracker</h1>\n    <concert-artists [concertId]=\"7\" (changed)=changed($event)></concert-artists>\n  </div>\n  ",
+                        template: "\n  <div>\n    <h1>Concert Tracker</h1>\n    <concert-artists (changed)=changed($event)></concert-artists>\n  </div>\n  ",
                         directives: [artists_component_1.ArtistsComponent],
                         providers: [http_1.HTTP_PROVIDERS]
                     }), 

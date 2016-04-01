@@ -8,7 +8,7 @@ import { ArtistsComponent } from './artists.component';
   template: `
   <div>
     <h1>Concert Tracker</h1>
-    <concert-artists [concertId]="7" (changed)=changed($event)></concert-artists>
+    <concert-artists (changed)=changed($event)></concert-artists>
   </div>
   `,
   directives: [ArtistsComponent],

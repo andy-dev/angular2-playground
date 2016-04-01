@@ -3,7 +3,7 @@
   import { Artist } from './artist.service';
 
   @Component({
-    selector: 'concert-artists',
+    selector: 'concert-artist',
     template: '<h3 *ngIf="artist">You selected {{artist.name}}</h3>',
   })
   export class ArtistComponent {
