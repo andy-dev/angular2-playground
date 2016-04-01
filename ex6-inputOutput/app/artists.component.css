@@ -1,0 +1,13 @@
+.artists {
+  list-style-type: none;
+}
+
+*.artists li {
+  padding: 4px;
+  cursor: pointer;
+}
+
+*.artists li .selected {
+  background-color: #ccc;
+  width: 250px;
+}

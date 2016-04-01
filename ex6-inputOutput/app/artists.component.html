@@ -1,0 +1,10 @@
+<article>
+  <ul class="artists">
+    <li *ngFor="#artist of artists">
+       <div (click)="select(artist)"
+        [class.selected]="artist === selectedArtist"
+        >{{artist.id}}. {{artist.name}}</div>
+    </li>
+  </ul>
+  <concert-artists [artist]="selectedArtist"></concert-artists>
+</article>

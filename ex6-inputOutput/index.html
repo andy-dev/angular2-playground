@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 1. Load libraries -->
+    <!-- IE required polyfills, in this exact order -->
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+    <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+
+
+    <!-- If you want to default to ts you would use this: -->
+    <!-- <script src="https://code.angularjs.org/tools/typescript.js"></script> -->
+
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="node_modules/angular2/bundles/http.dev.js"></script>
+
+  <script>
+      System.config({
+        transpiler: 'typescript',
+        typescriptOptions: { emitDecoratorMetadata: true },
+        packages: {
+          'api': {defaultExtension: 'js'},
+          'app': {defaultExtension: 'js'}
+        }
+      });
+    System.import('app/main')
+          .then(null, console.error.bind(console));
+  </script>
+
+</head>
+
+<body>
+  <concert-app>Loading Concert Lineup ...</concert-app>
+</body>
+
+</html>
