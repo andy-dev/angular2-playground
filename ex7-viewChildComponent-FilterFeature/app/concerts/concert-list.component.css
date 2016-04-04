@@ -1,9 +1,9 @@
-.artists {
+.concerts {
   list-style-type: none;
   padding: 0;
 }
 
-*.artists li {
+*.concerts li {
   padding: 4px;
 }
 
