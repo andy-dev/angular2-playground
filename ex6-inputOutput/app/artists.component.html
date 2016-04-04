@@ -1,6 +1,9 @@
 <article>
+
+<filter-text (changed)="filterChanged($event)"></filter-text>
+
   <ul class="artists">
-    <li *ngFor="#artist of artists">
+    <li *ngFor="#artist of filteredArtists">
        <div (click)="select(artist)"
         [class.selected]="artist === selectedArtist"
         >{{artist.id}}. {{artist.name}}</div>
