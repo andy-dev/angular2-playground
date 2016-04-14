@@ -6,11 +6,6 @@ import {Component} from 'angular2/core'
   styleUrls: ['app/app.component.css']
 })
 
-// export class AppComponent {
-//   title = 'Angular 2 Two-way Binding';
-
-//   imagePath = "http://static2.businessinsider.com/image/5537c43b6da8118d4484b11b-842-421/inception-top-spinning-rotation-2.png";
-// }
 
 export class AppComponent {
   title: string;
