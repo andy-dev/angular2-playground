@@ -6,39 +6,47 @@
     },
     {
       "id": 2,
-      "name": "Heroes del Silencio"
+      "name": "Héroes del Silencio"
     },
-    {
+     {
       "id": 3,
-      "name": "Cafe Tacvba"
+      "name": "Caifanes"
     },
     {
       "id": 4,
-      "name": "Red Hot Chili Peppers"
+      "name": "Foo Fighters"
     },
     {
       "id": 5,
-      "name": "Radiohead"
+      "name": "Cafe Tacvba"
     },
     {
       "id": 6,
-      "name": "Eric Clapton"
+      "name": "Red Hot Chili Peppers"
     },
     {
       "id": 7,
-      "name": "Led Zepellin"
+      "name": "Radiohead"
     },
     {
       "id": 8,
-      "name": "Artic Monkeys"
+      "name": "Led Zepellin"
     },
     {
       "id": 9,
+      "name": "Artic Monkeys"
+    },
+    {
+      "id": 10,
       "name": "Metallica"
     },
     {
       "id": 10,
       "name": "Buddy Guy"
+    },
+    {
+      "id": 11,
+      "name": "Eric Clapton"
     }
   ]
 }
