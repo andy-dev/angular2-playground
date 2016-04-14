@@ -8,36 +8,37 @@ import { Concert, ConcertService } from './concert.service';
   selector: 'concert-list',
   templateUrl: './app/concerts/concert-list.component.html',
   styleUrls: ['./app/concerts/concert-list.component.css'],
-  providers: [FilterService]
+  directives: [FilterTextComponent],
+  providers: [FilterService, ConcertService]
 })
 
 export class ConcertListComponent implements  OnInit{
   concerts: Concert[];
   filteredConcerts = this.concerts;
-  @ViewChild(FilterTextComponent) filterComponent; FilterTextComponent;
+  @ViewChild(FilterTextComponent) filterComponent: FilterTextComponent;
 
   constructor(
     private _filterService: FilterService,
-    private _concertservice: ConcertService) {}
+    private _concertService: ConcertService) {}
 
   filterChanged(searchText: string){
     this.filteredConcerts = this._filterService.filter(searchText, ['id', 'name'], this.concerts);
   }
 
-  // getconcerts(){
-  //   this.concerts = [];
-  //   this._concertservice.getConcerts()
-  //     .subscribe(concerts => {
-  //       this.concerts = this.filteredConcerts = concerts;
-  //       this.filterComponent.clear();
-  //     });
-  // }
+  getConcerts(){
+    this.concerts = [];
+    this._concertService.getConcerts()
+      .subscribe(concerts => {
+        this.concerts = this.filteredConcerts = concerts;
+        this.filterComponent.clear();
+      });
+  }
 
   ngOnInit(){
     componentHandler.upgradeDom();
-    this._concertservice.getConcerts()
+    this.getConcerts();
+    this._concertService.getConcerts()
       .subscribe(concerts => this.concerts = concerts);
   }
-
 
 }

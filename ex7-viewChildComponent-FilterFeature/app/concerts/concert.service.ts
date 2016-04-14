@@ -12,7 +12,8 @@ export class ConcertService {
   constructor(private _http: Http) { }
 
   getConcerts() {
-    return this._http.get('api/artists.json')
+    console.log("we got here")
+    return this._http.get('api/concerts.json')
       .map((response: Response) => response.json().data);
   }
 }

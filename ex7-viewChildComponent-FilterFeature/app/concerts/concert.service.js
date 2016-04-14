@@ -27,7 +27,8 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/Rx'], function(exports_
                     this._http = _http;
                 }
                 ConcertService.prototype.getConcerts = function () {
-                    return this._http.get('api/artists.json')
+                    console.log("we got here");
+                    return this._http.get('api/concerts.json')
                         .map(function (response) { return response.json().data; });
                 };
                 ConcertService = __decorate([

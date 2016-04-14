@@ -25,38 +25,41 @@ System.register(['angular2/core', '../blocks/blocks', './concert.service'], func
             }],
         execute: function() {
             ConcertListComponent = (function () {
-                function ConcertListComponent(_filterService, _concertservice) {
+                function ConcertListComponent(_filterService, _concertService) {
                     this._filterService = _filterService;
-                    this._concertservice = _concertservice;
+                    this._concertService = _concertService;
                     this.filteredConcerts = this.concerts;
                 }
                 ConcertListComponent.prototype.filterChanged = function (searchText) {
                     this.filteredConcerts = this._filterService.filter(searchText, ['id', 'name'], this.concerts);
                 };
-                // getconcerts(){
-                //   this.concerts = [];
-                //   this._concertservice.getConcerts()
-                //     .subscribe(concerts => {
-                //       this.concerts = this.filteredConcerts = concerts;
-                //       this.filterComponent.clear();
-                //     });
-                // }
+                ConcertListComponent.prototype.getConcerts = function () {
+                    var _this = this;
+                    this.concerts = [];
+                    this._concertService.getConcerts()
+                        .subscribe(function (concerts) {
+                        _this.concerts = _this.filteredConcerts = concerts;
+                        _this.filterComponent.clear();
+                    });
+                };
                 ConcertListComponent.prototype.ngOnInit = function () {
                     var _this = this;
                     componentHandler.upgradeDom();
-                    this._concertservice.getConcerts()
+                    this.getConcerts();
+                    this._concertService.getConcerts()
                         .subscribe(function (concerts) { return _this.concerts = concerts; });
                 };
                 __decorate([
                     core_1.ViewChild(blocks_1.FilterTextComponent), 
-                    __metadata('design:type', Object)
+                    __metadata('design:type', blocks_1.FilterTextComponent)
                 ], ConcertListComponent.prototype, "filterComponent", void 0);
                 ConcertListComponent = __decorate([
                     core_1.Component({
                         selector: 'concert-list',
                         templateUrl: './app/concerts/concert-list.component.html',
                         styleUrls: ['./app/concerts/concert-list.component.css'],
-                        providers: [blocks_1.FilterService]
+                        directives: [blocks_1.FilterTextComponent],
+                        providers: [blocks_1.FilterService, concert_service_1.ConcertService]
                     }), 
                     __metadata('design:paramtypes', [blocks_1.FilterService, concert_service_1.ConcertService])
                 ], ConcertListComponent);

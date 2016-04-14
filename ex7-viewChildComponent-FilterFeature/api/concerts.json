@@ -1,0 +1,44 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Pink Floyd"
+    },
+    {
+      "id": 2,
+      "name": "Heroes del Silencio"
+    },
+    {
+      "id": 3,
+      "name": "Cafe Tacvba"
+    },
+    {
+      "id": 4,
+      "name": "Red Hot Chili Peppers"
+    },
+    {
+      "id": 5,
+      "name": "Radiohead"
+    },
+    {
+      "id": 6,
+      "name": "Eric Clapton"
+    },
+    {
+      "id": 7,
+      "name": "Led Zepellin"
+    },
+    {
+      "id": 8,
+      "name": "Artic Monkeys"
+    },
+    {
+      "id": 9,
+      "name": "Metallica"
+    },
+    {
+      "id": 10,
+      "name": "Buddy Guy"
+    }
+  ]
+}
