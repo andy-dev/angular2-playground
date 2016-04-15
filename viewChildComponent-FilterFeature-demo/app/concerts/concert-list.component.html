@@ -1,0 +1,9 @@
+<div class="myConcerts">
+  <filter-text (changed)="filterChanged($event)"></filter-text>
+
+  <ul>
+    <li *ngFor= "#concert of filteredConcerts">
+      {{concert.name}}
+    </li>
+  </ul>
+</div>
